@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    background: rgb(33, 33, 33);
+    font-family: 'Roboto-OpenWifi';
+    height: 100vh;
+    flex-direction: column;
+}
+:root {
+    --accent-style: rgb(24, 108, 234);
+
+    --header-style: rgba(34, 34, 34, 1);
+    --header-sep-style: rgba(255, 255, 255, .05);
+    --form-border-sep-style: rgba(255, 255, 255, 0.15);
+
+    --none-text: rgba(255, 255, 255, .20);
+}
+@font-face {
+    font-family: 'Roboto-OpenWifi';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form > * {
+    font-family: 'Roboto-OpenWifi';
+    max-width: 427px;
+    width: 100%;
+    padding: 16px 25px;
+
+    border-radius: 5px;
+    border: 2px solid var(--form-border-sep-style);
+    background: var(--header-style);
+    color: #fff;
+    outline: none;
+    transition: .1s;
+    font-size: 16px;
+}
+.login-form .btn {
+    text-align: center;
+    color: var(--accent-style);
+    border: 2px solid var(--accent-style);
+    cursor: pointer;
+}
+.login-form .btn:hover {
+    text-align: center;
+    color: rgb(33, 33, 33);
+    background: var(--accent-style);
+    border: 2px solid var(--accent-style);
+}
+.login-form > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.login-form > *::placeholder {
+    color: var(--form-border-sep-style);
+}
+.login-form .bottom-sep {
+    margin-bottom: 25px;
+}

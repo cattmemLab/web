@@ -1,0 +1,24 @@
+.err404 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.err404 > .err404-content {
+    display: flex;
+    background: url(../images/svg/errNoPage.svg);
+    width: 149px;
+    height: 149px;
+    justify-content: center;
+    align-items: center;
+}
+.err404 > div::before {
+    position: absolute;
+    display: block;
+    content: '404';
+    text-align: center;
+    color: rgb(206, 206, 206);
+    font-size: 120px;
+    width: 230px;
+}

@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    background: rgb(33, 33, 33);
+    font-family: 'Roboto-OpenWifi';
+    height: 100vh;
+    flex-direction: column;
+}
+:root {
+    --accent-style: rgb(24, 108, 234);
+
+    --header-style: rgba(34, 34, 34, 1);
+    --header-sep-style: rgba(255, 255, 255, .05);
+    --form-border-sep-style: rgba(255, 255, 255, 0.15);
+
+    --none-text: rgba(255, 255, 255, .20);
+}
+@font-face {
+    font-family: 'Playfair-OpenWifi';
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Inter-OpenWifi';
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+.container {
+    margin: 0 29px;
+}
+
+/* # */
+#fullsize {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.container:not(:first-child) {
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 29px;
+}
+.hero > * > .block {
+    display: flex;
+    color: var(--accent-style);
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, .03);
+    border-radius: 5px;
+    flex-direction: row;
+    border: 1px solid rgba(255, 255, 255, .036);
+    cursor: pointer;
+    transition: .1s;
+    text-decoration: none;
+}
+.hero > * > .page {
+    font-family: 'Playfair-OpenWifi';
+    color: rgb(255, 255, 255);
+}
+b {
+    font-weight: 600;
+}
+a {
+    color: var(--accent-style)
+}
+.toolHref {
+    font-weight: 500;
+    font-family: 'Inter-OpenWifi';
+    font-size: 15px;
+}
+.hero > * > .page > .h {
+    margin-top: 15px;
+    font-size: 1.8em;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-weight: 100;
+}
+.hero > * > .page > .tools {
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.hero > * .page > .text {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: 'Inter-OpenWifi';
+    font-weight: 300;
+}
+.hero > * > .block:nth-child(2n+1) {
+    background: rgba(255, 255, 255, .04);
+}
+.hero > * > .block:hover {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .046);
+}
+.hero > * > .block > .id {
+    display: flex;
+    color: rgba(255, 255, 255, .5);
+    margin-right: 15px;
+    margin-left: 5px;
+}
+.hero > * > .block > .name {
+    text-decoration: underline;
+}
+.hero > * > .block:not(:last-child) {
+    margin-bottom: 10px;
+}
